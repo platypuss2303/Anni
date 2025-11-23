@@ -6,7 +6,7 @@
 // Thông tin đăng nhập
 const VALID_CREDENTIALS = {
   email: "hiepdayne23@gmail.com",
-  password: "thyhiepdangiu",
+  password: "thyhiepdangiuu",
 };
 
 // Key lưu trữ trạng thái đăng nhập
@@ -77,7 +77,7 @@ function handleLogin(event) {
     if (login(email, password)) {
       // Đăng nhập thành công
       errorElement.style.display = "none";
-      loginBtn.textContent = "Thành công! ❤️";
+      loginBtn.textContent = "Thành công";
       loginBtn.style.background = "linear-gradient(135deg, #4ade80, #22c55e)";
 
       // Tạo hiệu ứng trái tim
@@ -93,7 +93,7 @@ function handleLogin(event) {
       errorElement.textContent = "❌ Email hoặc mật khẩu không đúng!";
       errorElement.style.display = "block";
       loginBtn.disabled = false;
-      loginBtn.textContent = "Đăng Nhập 💕";
+      loginBtn.textContent = "Đăng Nhập";
 
       // Shake animation
       const loginContainer = document.querySelector(".login-container");
@@ -176,10 +176,18 @@ document.head.appendChild(shakeStyle);
 function initAuth() {
   const loginForm = document.getElementById("login-form");
   const loginScreen = document.getElementById("login-screen");
+  const logoutBtn = document.getElementById("logout-btn");
+  const passwordInput = document.getElementById("password");
+  const passwordToggle = document.getElementById("password-toggle");
 
   if (isAuthenticated()) {
     // Đã đăng nhập, ẩn login screen
     loginScreen.style.display = "none";
+
+    // Hiển thị nút logout
+    if (logoutBtn) {
+      logoutBtn.style.display = "block";
+    }
 
     // Hiển thị loading screen
     const loadingScreen = document.getElementById("loading-screen");
@@ -193,19 +201,57 @@ function initAuth() {
     // Chưa đăng nhập, hiển thị login screen
     loginScreen.style.display = "flex";
 
+    // Ẩn nút logout
+    if (logoutBtn) {
+      logoutBtn.style.display = "none";
+    }
+
     // Thêm event listener cho form
     if (loginForm) {
       loginForm.addEventListener("submit", handleLogin);
     }
   }
+
+  // Thêm event listener cho nút logout
+  if (logoutBtn) {
+    logoutBtn.addEventListener("click", () => {
+      if (confirm("Bạn có chắc muốn đăng xuất? 🥺")) {
+        logout();
+      }
+    });
+  }
+
+  // Toggle hiển/ẩn mật khẩu
+  if (passwordInput && passwordToggle) {
+    passwordToggle.addEventListener("click", () => {
+      if (passwordInput.type === "password") {
+        passwordInput.type = "text";
+        passwordToggle.innerHTML =
+          '<svg class="eye-icon eye-closed" aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.94 17.94A10.94 10.94 0 0 1 12 20c-7 0-11-8-11-8a21.77 21.77 0 0 1 5.06-6.94M9.9 4.24A10.94 10.94 0 0 1 12 4c7 0 11 8 11 8a21.82 21.82 0 0 1-2.62 3.95"/><path d="M3 3l18 18"/><path d="M10.73 10.73a2.5 2.5 0 0 0 3.54 3.54"/></svg>';
+        passwordToggle.setAttribute("aria-label", "Ẩn mật khẩu");
+      } else {
+        passwordInput.type = "password";
+        passwordToggle.innerHTML =
+          '<svg class="eye-icon eye-open" aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8Z"/><circle cx="12" cy="12" r="3"/></svg>';
+        passwordToggle.setAttribute("aria-label", "Hiện mật khẩu");
+      }
+    });
+  }
 }
 
-// Thêm nút logout (ẩn, có thể dùng bằng console hoặc phím tắt)
+// Phím tắt logout (Ctrl + Shift + L)
 document.addEventListener("keydown", (e) => {
-  // Nhấn Ctrl + Shift + L để logout
   if (e.ctrlKey && e.shiftKey && e.key === "L") {
-    if (confirm("Bạn có chắc muốn đăng xuất?")) {
+    if (isAuthenticated() && confirm("Bạn có chắc muốn đăng xuất?")) {
       logout();
+    }
+  }
+  // Phím tắt Alt + H để toggle mật khẩu
+  if (e.altKey && (e.key === "h" || e.key === "H")) {
+    const passwordInput = document.getElementById("password");
+    const passwordToggle = document.getElementById("password-toggle");
+    if (passwordInput && passwordToggle) {
+      passwordToggle.click();
     }
   }
 });

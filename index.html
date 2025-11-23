@@ -3,7 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Kỷ Niệm 6 Tháng Bên Nhau ❤️</title>
+    <title>Love Diary</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/fav.png" sizes="32x32" />
+    <link rel="apple-touch-icon" href="images/fav.png" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -17,17 +20,12 @@
     <div id="login-screen">
       <div class="login-container">
         <div class="login-heart">💖</div>
-        <h2 class="login-title">Chào em yêu!</h2>
-        <p class="login-subtitle">Đăng nhập để xem kỷ niệm của chúng ta ❤️</p>
+        <h2 class="login-title">Chào cậu!</h2>
+        <p class="login-subtitle">Đăng nhập để xem kỷ niệm của chúng tớ</p>
         <form id="login-form" class="login-form">
           <div class="input-group">
             <label for="email">Email</label>
-            <input
-              type="email"
-              id="email"
-              placeholder="Nhập email của em"
-              required
-            />
+            <input type="email" id="email" placeholder="Nhập email" required />
           </div>
           <div class="input-group">
             <label for="password">Mật khẩu</label>
@@ -37,8 +35,30 @@
               placeholder="Nhập mật khẩu"
               required
             />
+            <button
+              type="button"
+              id="password-toggle"
+              class="password-toggle"
+              aria-label="Hiện mật khẩu"
+            >
+              <svg
+                class="eye-icon eye-open"
+                aria-hidden="true"
+                width="22"
+                height="22"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8Z" />
+                <circle cx="12" cy="12" r="3" />
+              </svg>
+            </button>
           </div>
-          <button type="submit" class="login-btn">Đăng Nhập 💕</button>
+          <button type="submit" class="login-btn">Đăng Nhập</button>
           <p id="login-error" class="login-error" style="display: none"></p>
         </form>
       </div>
@@ -54,12 +74,20 @@
 
     <!-- Audio Player -->
     <audio id="background-music" loop>
-      <source src="audio/love-song.mp3" type="audio/mpeg" />
+      <source
+        src="audio/Phép Màu - MAYDAYs ft. Minh Tốc l Piano Cover.mp3"
+        type="audio/mpeg"
+      />
     </audio>
 
     <!-- Music Control Button -->
     <button id="music-toggle" class="music-btn">
       <span class="music-icon">🎵</span>
+    </button>
+
+    <!-- Logout Button -->
+    <button id="logout-btn" class="logout-btn" style="display: none">
+      <span class="logout-icon">Đăng xuất</span>
     </button>
 
     <!-- Header -->
@@ -140,8 +168,8 @@
     <!-- Footer -->
     <footer class="footer">
       <div class="container">
-        <p>Được làm với ❤️ dành riêng cho em</p>
-        <p class="footer-date">Kỷ niệm 6 tháng - 2025</p>
+        <p>Made by quin@03.23</p>
+        <p class="footer-date">Dành tặng Hịp iuu ❤️</p>
       </div>
     </footer>
 
@@ -155,7 +183,7 @@
 
     <!-- Replace YOUR_API_KEY with your actual Google Maps API key -->
     <script
-      src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap&libraries=places"
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDsOHih-ryYjHXS1dfO22yyX1bVRodZvcw&callback=initMap&libraries=places"
       async
       defer
     ></script>

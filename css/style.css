@@ -104,6 +104,7 @@ body {
 
 .input-group {
   margin-bottom: 20px;
+  position: relative;
 }
 
 .input-group label {
@@ -129,6 +130,54 @@ body {
   outline: none;
   border-color: var(--primary-pink);
   box-shadow: 0 0 0 3px rgba(255, 182, 193, 0.2);
+}
+
+/* Password visibility toggle */
+.password-toggle {
+  position: absolute;
+  top: 50%;
+  right: 16px;
+  transform: translateY(-50%);
+  background: var(--pale-pink);
+  border: 2px solid var(--light-pink);
+  font-size: 1rem;
+  line-height: 1;
+  color: var(--deep-pink);
+  cursor: pointer;
+  padding: 6px 8px;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.25s ease, color 0.25s ease, border-color 0.25s;
+}
+
+.password-toggle .eye-icon {
+  display: block;
+  width: 22px;
+  height: 22px;
+  pointer-events: none;
+}
+
+.password-toggle:hover {
+  background: var(--light-pink);
+  border-color: var(--primary-pink);
+}
+
+.password-toggle:active {
+  background: var(--primary-pink);
+  color: var(--white);
+}
+
+@media (max-width: 480px) {
+  .password-toggle {
+    right: 10px;
+    font-size: 0.9rem;
+    width: 34px;
+    height: 34px;
+  }
 }
 
 .login-btn {
@@ -163,6 +212,42 @@ body {
   background: #ffe5e5;
   border-radius: 8px;
   text-align: center;
+}
+
+/* ============================================
+   LOGOUT BUTTON
+   ============================================ */
+.logout-btn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 12px 24px;
+  background: linear-gradient(135deg, var(--primary-pink), var(--deep-pink));
+  color: var(--white);
+  border: none;
+  border-radius: 25px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: var(--font-main);
+  box-shadow: 0 4px 15px var(--shadow);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  z-index: 1000;
+}
+
+.logout-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px var(--shadow);
+}
+
+.logout-btn:active {
+  transform: translateY(0);
+}
+
+.logout-icon {
+  display: flex;
+  align-items: center;
+  gap: 5px;
 }
 
 /* ============================================
@@ -844,6 +929,13 @@ body {
   .login-title {
     font-size: 2rem;
   }
+
+  .logout-btn {
+    padding: 10px 20px;
+    font-size: 0.85rem;
+    top: 15px;
+    right: 15px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -865,6 +957,13 @@ body {
 
   #map {
     height: 350px;
+  }
+
+  .logout-btn {
+    padding: 8px 16px;
+    font-size: 0.8rem;
+    top: 10px;
+    right: 10px;
   }
 }
 

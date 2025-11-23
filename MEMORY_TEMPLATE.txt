@@ -1,0 +1,304 @@
+========================================
+TEMPLATE THÊM ĐỊA ĐIỂM KỶ NIỆM
+========================================
+
+Hướng dẫn sử dụng:
+1. Copy template bên dưới
+2. Điền thông tin cho mỗi địa điểm
+3. Gửi lại file này hoặc copy nội dung đã điền
+4. Tôi sẽ tự động convert sang code và thêm vào config.js
+
+Lưu ý:
+- Mỗi địa điểm cách nhau bằng dòng "---"
+- Không bỏ trống các trường bắt buộc (*)
+- Có thể thêm nhiều ảnh, mỗi ảnh một dòng
+- Story/Letter: viết tự do, xuống dòng bình thường
+
+========================================
+
+--- ĐỊA ĐIỂM 1 ---
+
+[ID]*: 1
+
+
+[TIÊU ĐỀ]*: Nơi Chúng Mình Gặp Nhau 
+
+
+[NGÀY]*: 27/01/2024
+
+
+[TỌA ĐỘ]*:
+Latitude: 13.80390945153792
+Longitude: 109.21904657838888
+
+
+[HÌNH ẢNH]:
+images\mem1_1
+images\mem1_2
+
+
+[ĐẶC BIỆT]: Không
+
+
+[CÂU CHUYỆN]:
+Ngày đó, anh nhớ như in khoảnh khắc đầu tiên nhìn thấy em. 
+Đôi mắt em sáng lên như những vì sao, nụ cười em khiến tim anh đập thình thích.
+Đó là một buổi chiều mùa hè, nắng vàng và gió nhẹ...
+
+
+[THƯ TÌNH] (chỉ dùng nếu [ĐẶC BIỆT] = Có):
+
+
+========================================
+
+--- ĐỊA ĐIỂM 2 ---
+
+[ID]*: 2
+
+[TIÊU ĐỀ]*: Leo núi
+
+[NGÀY]*: 
+
+[TỌA ĐỘ]*:
+Latitude: 13.733768466041461
+Longitude: 109.21383402378592
+
+[HÌNH ẢNH]:
+
+
+[ĐẶC BIỆT]: Không
+
+[CÂU CHUYỆN]:
+Leo núi cùng nhau hehe
+
+
+[THƯ TÌNH]:
+
+
+========================================
+
+--- ĐỊA ĐIỂM 3 ---
+
+[ID]*: 3
+
+[TIÊU ĐỀ]*: Chuyến đi Đà Nẵng
+
+[NGÀY]*: 
+
+[TỌA ĐỘ]*:
+Latitude: 15.968978720346735
+Longitude: 108.2604835988369
+
+[HÌNH ẢNH]:
+
+
+[ĐẶC BIỆT]: không
+
+[CÂU CHUYỆN]:
+Đi dn heheh
+
+[THƯ TÌNH]:
+
+
+
+
+========================================
+
+--- ĐỊA ĐIỂM 4 ---
+
+[ID]*: 4
+
+[TIÊU ĐỀ]*: Chuyến đi trip
+
+[NGÀY]*: 
+
+[TỌA ĐỘ]*:
+Latitude: 13.837147271604849
+Longitude: 108.93010649829213
+
+[HÌNH ẢNH]:
+
+
+[ĐẶC BIỆT]: không
+
+[CÂU CHUYỆN]:
+Đi dn heheh
+
+[THƯ TÌNH]:
+
+
+
+
+========================================
+
+--- ĐỊA ĐIỂM 5 ---
+
+[ID]*: 5
+
+[TIÊU ĐỀ]*: Chuyến đi Quân sự
+
+[NGÀY]*: 
+
+[TỌA ĐỘ]*:
+Latitude: 114.030128713915614
+Longitude: 109.05674362014585
+
+[HÌNH ẢNH]:
+
+
+[ĐẶC BIỆT]: không
+
+[CÂU CHUYỆN]:
+Đi dn heheh
+
+[THƯ TÌNH]:
+
+
+
+
+========================================
+
+--- ĐỊA ĐIỂM 6---
+
+[ID]*: 6
+
+[TIÊU ĐỀ]*: FUV 1st exil
+
+[NGÀY]*: 
+
+[TỌA ĐỘ]*:
+Latitude: 113.769603454430722
+Longitude: 109.23436198466528
+
+[HÌNH ẢNH]:
+
+
+[ĐẶC BIỆT]: không
+
+[CÂU CHUYỆN]:
+Đi dn heheh
+
+[THƯ TÌNH]:
+
+
+========================================
+
+--- ĐỊA ĐIỂM 7---
+
+[ID]*: 7
+
+[TIÊU ĐỀ]*: đi nhậu cùng nhau
+
+[NGÀY]*: 
+
+[TỌA ĐỘ]*:
+Latitude: 13.76280604949219
+Longitude: 109.22012323448227
+
+[HÌNH ẢNH]:
+
+
+[ĐẶC BIỆT]: không
+
+[CÂU CHUYỆN]:
+Đi dn heheh
+
+[THƯ TÌNH]:
+
+========================================
+
+--- ĐỊA ĐIỂM 8 ---
+
+[ID]*: 8
+
+[TIÊU ĐỀ]*: Chuyến đi trip 2
+
+[NGÀY]*: 
+
+[TỌA ĐỘ]*:
+Latitude: 13.837147271604849
+Longitude: 108.93010649829213
+
+[HÌNH ẢNH]:
+
+
+[ĐẶC BIỆT]: không
+
+[CÂU CHUYỆN]:
+Đi dn heheh
+
+[THƯ TÌNH]:
+
+========================================
+
+--- ĐỊA ĐIỂM 9 ---
+
+[ID]*: 9
+
+[TIÊU ĐỀ]*: 112 thanh niên
+
+[NGÀY]*: 
+
+[TỌA ĐỘ]*:
+Latitude: 13.762925408710293
+Longitude: 109.21193811042609
+
+[HÌNH ẢNH]:
+
+
+[ĐẶC BIỆT]: không
+
+[CÂU CHUYỆN]:
+Đi dn heheh
+
+[THƯ TÌNH]:
+
+========================================
+
+--- ĐỊA ĐIỂM 10 ---
+
+[ID]*: 10
+
+[TIÊU ĐỀ]*: Chuyến đi Dal
+
+[NGÀY]*: 
+
+[TỌA ĐỘ]*:
+Latitude: 11.944095189651684
+Longitude: 108.52396456815104
+
+[HÌNH ẢNH]:
+
+
+[ĐẶC BIỆT]: không
+
+[CÂU CHUYỆN]:
+Đi dn heheh
+
+[THƯ TÌNH]:
+
+========================================
+
+--- ĐỊA ĐIỂM 11 ---
+
+[ID]*: 11
+
+[TIÊU ĐỀ]*: Căn cứ 1
+
+[NGÀY]*: 
+
+[TỌA ĐỘ]*:
+Latitude: 13.837147271604849
+Longitude: 108.93010649829213
+
+[HÌNH ẢNH]:
+Đi trip
+
+[ĐẶC BIỆT]: không
+
+[CÂU CHUYỆN]:
+Đi dn heheh
+
+[THƯ TÌNH]:
+
+========================================

@@ -23,57 +23,11 @@ function initMap() {
     fullscreenControl: true,
   });
 
-  // Tạo đường nối giữa các marker
-  createPolyline();
-
   // Tạo markers cho mỗi địa điểm
   createMarkers();
 
   // Tự động fit bounds để hiển thị tất cả markers
   fitMapBounds();
-}
-
-// Tạo đường nối giữa các địa điểm
-function createPolyline() {
-  const path = MEMORY_LOCATIONS.map((location) => ({
-    lat: location.lat,
-    lng: location.lng,
-  }));
-
-  const polyline = new google.maps.Polyline({
-    path: path,
-    geodesic: true,
-    strokeColor: "#FFB6C1",
-    strokeOpacity: 0.8,
-    strokeWeight: 3,
-    icons: [
-      {
-        icon: {
-          path: google.maps.SymbolPath.FORWARD_CLOSED_ARROW,
-          scale: 2,
-          strokeColor: "#FF91A4",
-        },
-        offset: "100%",
-        repeat: "100px",
-      },
-    ],
-  });
-
-  polyline.setMap(map);
-
-  // Animate polyline
-  animatePolyline(polyline);
-}
-
-// Animation cho đường nối
-function animatePolyline(line) {
-  let count = 0;
-  setInterval(() => {
-    count = (count + 1) % 200;
-    const icons = line.get("icons");
-    icons[0].offset = count / 2 + "%";
-    line.set("icons", icons);
-  }, 50);
 }
 
 // Tạo marker tùy chỉnh với biểu tượng trái tim
